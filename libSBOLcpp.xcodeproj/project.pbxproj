@@ -11,12 +11,12 @@
 		CE2588CF18EDFB8100242884 /* PortMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2588CD18EDFB8100242884 /* PortMap.cpp */; };
 		CE2588D218EDFE7F00242884 /* ComponentInstantiation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2588D018EDFE7F00242884 /* ComponentInstantiation.cpp */; };
 		CE2588D518EDFF4200242884 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2588D318EDFF4200242884 /* Component.cpp */; };
+		CE29DFED18EE0A6600EA4A64 /* Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE29DFEB18EE0A6600EA4A64 /* Context.cpp */; };
 		CE2A52C018DB8AFA009B7C3B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2A52BF18DB8AFA009B7C3B /* main.cpp */; };
 		CE2A52C218DB8AFA009B7C3B /* libSBOLcpp.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE2A52C118DB8AFA009B7C3B /* libSBOLcpp.1 */; };
 		CE2A52CE18DB8B48009B7C3B /* Documented.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2A52C818DB8B48009B7C3B /* Documented.cpp */; };
 		CE2A52CF18DB8B48009B7C3B /* Identified.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2A52CA18DB8B48009B7C3B /* Identified.cpp */; };
 		CE2A52D018DB8B48009B7C3B /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2A52CC18DB8B48009B7C3B /* Model.cpp */; };
-		CE2A52D318DB8EA4009B7C3B /* Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE2A52D118DB8EA4009B7C3B /* Context.cpp */; };
 		CE83EC3618DF745E00D58ED4 /* Collection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE83EC3418DF745E00D58ED4 /* Collection.cpp */; };
 		CE83EC3918DF756F00D58ED4 /* Interaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE83EC3718DF756F00D58ED4 /* Interaction.cpp */; };
 		CE83EC3C18DF759100D58ED4 /* Participation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE83EC3A18DF759100D58ED4 /* Participation.cpp */; };
@@ -45,6 +45,8 @@
 		CE2588D118EDFE7F00242884 /* ComponentInstantiation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentInstantiation.h; sourceTree = "<group>"; };
 		CE2588D318EDFF4200242884 /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
 		CE2588D418EDFF4200242884 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
+		CE29DFEB18EE0A6600EA4A64 /* Context.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Context.cpp; sourceTree = "<group>"; };
+		CE29DFEC18EE0A6600EA4A64 /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
 		CE2A52BC18DB8AFA009B7C3B /* libSBOLcpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = libSBOLcpp; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2A52BF18DB8AFA009B7C3B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CE2A52C118DB8AFA009B7C3B /* libSBOLcpp.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = libSBOLcpp.1; sourceTree = "<group>"; };
@@ -54,8 +56,6 @@
 		CE2A52CB18DB8B48009B7C3B /* Identified.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Identified.h; sourceTree = "<group>"; };
 		CE2A52CC18DB8B48009B7C3B /* Model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Model.cpp; sourceTree = "<group>"; };
 		CE2A52CD18DB8B48009B7C3B /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
-		CE2A52D118DB8EA4009B7C3B /* Context.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Context.cpp; path = ../Context.cpp; sourceTree = "<group>"; };
-		CE2A52D218DB8EA4009B7C3B /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Context.h; path = ../Context.h; sourceTree = "<group>"; };
 		CE83EC3418DF745E00D58ED4 /* Collection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Collection.cpp; sourceTree = "<group>"; };
 		CE83EC3518DF745E00D58ED4 /* Collection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collection.h; sourceTree = "<group>"; };
 		CE83EC3718DF756F00D58ED4 /* Interaction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Interaction.cpp; sourceTree = "<group>"; };
@@ -96,6 +96,8 @@
 		CE2A52BE18DB8AFA009B7C3B /* libSBOLcpp */ = {
 			isa = PBXGroup;
 			children = (
+				CE29DFEB18EE0A6600EA4A64 /* Context.cpp */,
+				CE29DFEC18EE0A6600EA4A64 /* Context.h */,
 				CE2588D318EDFF4200242884 /* Component.cpp */,
 				CE2588D418EDFF4200242884 /* Component.h */,
 				CE2588D018EDFE7F00242884 /* ComponentInstantiation.cpp */,
@@ -118,8 +120,6 @@
 				CE2A52CB18DB8B48009B7C3B /* Identified.h */,
 				CE2A52CC18DB8B48009B7C3B /* Model.cpp */,
 				CE2A52CD18DB8B48009B7C3B /* Model.h */,
-				CE2A52D118DB8EA4009B7C3B /* Context.cpp */,
-				CE2A52D218DB8EA4009B7C3B /* Context.h */,
 				CE2A52BF18DB8AFA009B7C3B /* main.cpp */,
 				CE2A52C118DB8AFA009B7C3B /* libSBOLcpp.1 */,
 			);
@@ -182,10 +182,10 @@
 				CE2A52CE18DB8B48009B7C3B /* Documented.cpp in Sources */,
 				CE2588CF18EDFB8100242884 /* PortMap.cpp in Sources */,
 				CE83EC3918DF756F00D58ED4 /* Interaction.cpp in Sources */,
+				CE29DFED18EE0A6600EA4A64 /* Context.cpp in Sources */,
 				CE83EC3F18DF785500D58ED4 /* Signal.cpp in Sources */,
 				CE2588D518EDFF4200242884 /* Component.cpp in Sources */,
 				CE2A52CF18DB8B48009B7C3B /* Identified.cpp in Sources */,
-				CE2A52D318DB8EA4009B7C3B /* Context.cpp in Sources */,
 				CE2588CC18EDFB5B00242884 /* Instantiation.cpp in Sources */,
 				CE2A52D018DB8B48009B7C3B /* Model.cpp in Sources */,
 				CE83EC3618DF745E00D58ED4 /* Collection.cpp in Sources */,
