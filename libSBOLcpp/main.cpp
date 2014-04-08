@@ -27,12 +27,17 @@ int main(int argc, const char * argv[])
     Collection c2 = Collection("c2","c2");
     
     Component c3 = Component("c3","c3","type");
-    Signal s = Signal("s", "s",c3);
+    
+    
+    Signal s = Signal("s", "s",&c3);
     Participation p = Participation("p","role",&s);
     
     list<Participation> p_list;
     p_list.push_back(p);
     Interaction i = Interaction("i", "i", "type", p_list);
+    
+    
+    
     
     cout << "Hello, World!\n";
     

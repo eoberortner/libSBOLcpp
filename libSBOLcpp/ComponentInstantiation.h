@@ -17,7 +17,7 @@ class ComponentInstantiation: public Instantiation
 {
 public:
     ComponentInstantiation(string identity,string displayId);
-    virtual Documented getInstantiated() = 0;
+    virtual Component* getInstantiated() = 0;
 };
 
 #endif /* defined(__UML_Diagram__ComponentInstantiation__) */

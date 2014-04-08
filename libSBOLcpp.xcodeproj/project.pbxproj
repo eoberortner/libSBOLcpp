@@ -21,6 +21,10 @@
 		CE83EC3918DF756F00D58ED4 /* Interaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE83EC3718DF756F00D58ED4 /* Interaction.cpp */; };
 		CE83EC3C18DF759100D58ED4 /* Participation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE83EC3A18DF759100D58ED4 /* Participation.cpp */; };
 		CE83EC3F18DF785500D58ED4 /* Signal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE83EC3D18DF785500D58ED4 /* Signal.cpp */; };
+		CE89B19118F3426700075009 /* SequenceAnnotation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE89B18D18F3426700075009 /* SequenceAnnotation.cpp */; };
+		CE89B19218F3426700075009 /* SequenceComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE89B18F18F3426700075009 /* SequenceComponent.cpp */; };
+		CE89B19518F3429100075009 /* Port.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE89B19318F3429100075009 /* Port.cpp */; };
+		CE89B19818F3450600075009 /* Sequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE89B19618F3450600075009 /* Sequence.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,6 +68,14 @@
 		CE83EC3B18DF759100D58ED4 /* Participation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Participation.h; sourceTree = "<group>"; };
 		CE83EC3D18DF785500D58ED4 /* Signal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Signal.cpp; sourceTree = "<group>"; };
 		CE83EC3E18DF785500D58ED4 /* Signal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signal.h; sourceTree = "<group>"; };
+		CE89B18D18F3426700075009 /* SequenceAnnotation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SequenceAnnotation.cpp; sourceTree = "<group>"; };
+		CE89B18E18F3426700075009 /* SequenceAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SequenceAnnotation.h; sourceTree = "<group>"; };
+		CE89B18F18F3426700075009 /* SequenceComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SequenceComponent.cpp; sourceTree = "<group>"; };
+		CE89B19018F3426700075009 /* SequenceComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SequenceComponent.h; sourceTree = "<group>"; };
+		CE89B19318F3429100075009 /* Port.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Port.cpp; sourceTree = "<group>"; };
+		CE89B19418F3429100075009 /* Port.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Port.h; sourceTree = "<group>"; };
+		CE89B19618F3450600075009 /* Sequence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sequence.cpp; sourceTree = "<group>"; };
+		CE89B19718F3450600075009 /* Sequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sequence.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,32 +108,40 @@
 		CE2A52BE18DB8AFA009B7C3B /* libSBOLcpp */ = {
 			isa = PBXGroup;
 			children = (
-				CE29DFEB18EE0A6600EA4A64 /* Context.cpp */,
-				CE29DFEC18EE0A6600EA4A64 /* Context.h */,
+				CE83EC3418DF745E00D58ED4 /* Collection.cpp */,
+				CE83EC3518DF745E00D58ED4 /* Collection.h */,
 				CE2588D318EDFF4200242884 /* Component.cpp */,
 				CE2588D418EDFF4200242884 /* Component.h */,
 				CE2588D018EDFE7F00242884 /* ComponentInstantiation.cpp */,
 				CE2588D118EDFE7F00242884 /* ComponentInstantiation.h */,
-				CE2588CD18EDFB8100242884 /* PortMap.cpp */,
-				CE2588CE18EDFB8100242884 /* PortMap.h */,
-				CE2588CA18EDFB5B00242884 /* Instantiation.cpp */,
-				CE2588CB18EDFB5B00242884 /* Instantiation.h */,
-				CE83EC3D18DF785500D58ED4 /* Signal.cpp */,
-				CE83EC3E18DF785500D58ED4 /* Signal.h */,
-				CE83EC3A18DF759100D58ED4 /* Participation.cpp */,
-				CE83EC3B18DF759100D58ED4 /* Participation.h */,
-				CE83EC3718DF756F00D58ED4 /* Interaction.cpp */,
-				CE83EC3818DF756F00D58ED4 /* Interaction.h */,
-				CE83EC3418DF745E00D58ED4 /* Collection.cpp */,
-				CE83EC3518DF745E00D58ED4 /* Collection.h */,
+				CE29DFEB18EE0A6600EA4A64 /* Context.cpp */,
+				CE29DFEC18EE0A6600EA4A64 /* Context.h */,
 				CE2A52C818DB8B48009B7C3B /* Documented.cpp */,
 				CE2A52C918DB8B48009B7C3B /* Documented.h */,
 				CE2A52CA18DB8B48009B7C3B /* Identified.cpp */,
 				CE2A52CB18DB8B48009B7C3B /* Identified.h */,
+				CE2588CA18EDFB5B00242884 /* Instantiation.cpp */,
+				CE2588CB18EDFB5B00242884 /* Instantiation.h */,
+				CE83EC3718DF756F00D58ED4 /* Interaction.cpp */,
+				CE83EC3818DF756F00D58ED4 /* Interaction.h */,
+				CE2A52C118DB8AFA009B7C3B /* libSBOLcpp.1 */,
+				CE2A52BF18DB8AFA009B7C3B /* main.cpp */,
 				CE2A52CC18DB8B48009B7C3B /* Model.cpp */,
 				CE2A52CD18DB8B48009B7C3B /* Model.h */,
-				CE2A52BF18DB8AFA009B7C3B /* main.cpp */,
-				CE2A52C118DB8AFA009B7C3B /* libSBOLcpp.1 */,
+				CE83EC3A18DF759100D58ED4 /* Participation.cpp */,
+				CE83EC3B18DF759100D58ED4 /* Participation.h */,
+				CE89B19318F3429100075009 /* Port.cpp */,
+				CE89B19418F3429100075009 /* Port.h */,
+				CE2588CD18EDFB8100242884 /* PortMap.cpp */,
+				CE2588CE18EDFB8100242884 /* PortMap.h */,
+				CE89B19618F3450600075009 /* Sequence.cpp */,
+				CE89B19718F3450600075009 /* Sequence.h */,
+				CE89B18D18F3426700075009 /* SequenceAnnotation.cpp */,
+				CE89B18E18F3426700075009 /* SequenceAnnotation.h */,
+				CE89B18F18F3426700075009 /* SequenceComponent.cpp */,
+				CE89B19018F3426700075009 /* SequenceComponent.h */,
+				CE83EC3D18DF785500D58ED4 /* Signal.cpp */,
+				CE83EC3E18DF785500D58ED4 /* Signal.h */,
 			);
 			path = libSBOLcpp;
 			sourceTree = "<group>";
@@ -181,7 +201,9 @@
 				CE83EC3C18DF759100D58ED4 /* Participation.cpp in Sources */,
 				CE2A52CE18DB8B48009B7C3B /* Documented.cpp in Sources */,
 				CE2588CF18EDFB8100242884 /* PortMap.cpp in Sources */,
+				CE89B19818F3450600075009 /* Sequence.cpp in Sources */,
 				CE83EC3918DF756F00D58ED4 /* Interaction.cpp in Sources */,
+				CE89B19118F3426700075009 /* SequenceAnnotation.cpp in Sources */,
 				CE29DFED18EE0A6600EA4A64 /* Context.cpp in Sources */,
 				CE83EC3F18DF785500D58ED4 /* Signal.cpp in Sources */,
 				CE2588D518EDFF4200242884 /* Component.cpp in Sources */,
@@ -189,6 +211,8 @@
 				CE2588CC18EDFB5B00242884 /* Instantiation.cpp in Sources */,
 				CE2A52D018DB8B48009B7C3B /* Model.cpp in Sources */,
 				CE83EC3618DF745E00D58ED4 /* Collection.cpp in Sources */,
+				CE89B19218F3426700075009 /* SequenceComponent.cpp in Sources */,
+				CE89B19518F3429100075009 /* Port.cpp in Sources */,
 				CE2588D218EDFE7F00242884 /* ComponentInstantiation.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

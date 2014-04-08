@@ -18,12 +18,12 @@ using namespace std;
 class Signal : public ComponentInstantiation
 {
 private:
-    Component instantiated;
+    Component* instantiated;
     
 public:
-    Signal(string identity, string displayId, Component instantiated);
+    Signal(string identity, string displayId, Component* instantiated);
     
-    Documented getInstantiated();
+    Component* getInstantiated();
 };
 
 #endif /* defined(__UML_Diagram__Signal__) */

@@ -8,13 +8,16 @@
 
 #include "Signal.h"
 
-Signal::Signal(string identity, string displayId, Component instantiated)
-    :ComponentInstantiation(identity, displayId), instantiated(instantiated)
+Signal::Signal(string identity, string displayId, Component* instantiated)
+:ComponentInstantiation(identity, displayId), instantiated(instantiated)
 {
     this->instantiated = instantiated;
 }
 
-Documented Signal::getInstantiated()
+
+
+Component* Signal::getInstantiated()
 {
-    return this->instantiated;
+    return (this->instantiated);
 }
+ 

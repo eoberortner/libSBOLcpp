@@ -19,10 +19,11 @@ class Instantiation: public Documented
     list<PortMap> portMaps;
     
 public:
+        
     Instantiation(string identity, string displayId);
     
     list<PortMap> getPortMaps();
-    virtual Documented getInstantiated() = 0;
+    virtual Documented* getInstantiated() = 0;
     
 };
 

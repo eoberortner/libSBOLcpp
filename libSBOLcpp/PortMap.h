@@ -11,10 +11,17 @@
 
 #include <iostream>
 #include "Identified.h"
+#include "Port.h"
 
 class PortMap: public Identified
 {
+private:
+    Port port;
     
+public:
+    PortMap(string identity);
+    
+    //Port getPort();
 };
 
 #endif /* defined(__UML_Diagram__PortMap__) */
