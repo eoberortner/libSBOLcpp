@@ -25,6 +25,9 @@
 		CE89B19218F3426700075009 /* SequenceComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE89B18F18F3426700075009 /* SequenceComponent.cpp */; };
 		CE89B19518F3429100075009 /* Port.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE89B19318F3429100075009 /* Port.cpp */; };
 		CE89B19818F3450600075009 /* Sequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE89B19618F3450600075009 /* Sequence.cpp */; };
+		CEA17E2E1900245D00558F70 /* Module.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEA17E2C1900245D00558F70 /* Module.cpp */; };
+		CEA17E31190025FC00558F70 /* ModuleInstantiation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEA17E2F190025FC00558F70 /* ModuleInstantiation.cpp */; };
+		CEA17E34190027C200558F70 /* GenericComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEA17E32190027C200558F70 /* GenericComponent.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -76,6 +79,12 @@
 		CE89B19418F3429100075009 /* Port.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Port.h; sourceTree = "<group>"; };
 		CE89B19618F3450600075009 /* Sequence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sequence.cpp; sourceTree = "<group>"; };
 		CE89B19718F3450600075009 /* Sequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sequence.h; sourceTree = "<group>"; };
+		CEA17E2C1900245D00558F70 /* Module.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Module.cpp; sourceTree = "<group>"; };
+		CEA17E2D1900245D00558F70 /* Module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Module.h; sourceTree = "<group>"; };
+		CEA17E2F190025FC00558F70 /* ModuleInstantiation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ModuleInstantiation.cpp; sourceTree = "<group>"; };
+		CEA17E30190025FC00558F70 /* ModuleInstantiation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleInstantiation.h; sourceTree = "<group>"; };
+		CEA17E32190027C200558F70 /* GenericComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GenericComponent.cpp; sourceTree = "<group>"; };
+		CEA17E33190027C200558F70 /* GenericComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericComponent.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +127,8 @@
 				CE29DFEC18EE0A6600EA4A64 /* Context.h */,
 				CE2A52C818DB8B48009B7C3B /* Documented.cpp */,
 				CE2A52C918DB8B48009B7C3B /* Documented.h */,
+				CEA17E32190027C200558F70 /* GenericComponent.cpp */,
+				CEA17E33190027C200558F70 /* GenericComponent.h */,
 				CE2A52CA18DB8B48009B7C3B /* Identified.cpp */,
 				CE2A52CB18DB8B48009B7C3B /* Identified.h */,
 				CE2588CA18EDFB5B00242884 /* Instantiation.cpp */,
@@ -128,6 +139,10 @@
 				CE2A52BF18DB8AFA009B7C3B /* main.cpp */,
 				CE2A52CC18DB8B48009B7C3B /* Model.cpp */,
 				CE2A52CD18DB8B48009B7C3B /* Model.h */,
+				CEA17E2C1900245D00558F70 /* Module.cpp */,
+				CEA17E2D1900245D00558F70 /* Module.h */,
+				CEA17E2F190025FC00558F70 /* ModuleInstantiation.cpp */,
+				CEA17E30190025FC00558F70 /* ModuleInstantiation.h */,
 				CE83EC3A18DF759100D58ED4 /* Participation.cpp */,
 				CE83EC3B18DF759100D58ED4 /* Participation.h */,
 				CE89B19318F3429100075009 /* Port.cpp */,
@@ -202,8 +217,11 @@
 				CE2A52CE18DB8B48009B7C3B /* Documented.cpp in Sources */,
 				CE2588CF18EDFB8100242884 /* PortMap.cpp in Sources */,
 				CE89B19818F3450600075009 /* Sequence.cpp in Sources */,
+				CEA17E34190027C200558F70 /* GenericComponent.cpp in Sources */,
 				CE83EC3918DF756F00D58ED4 /* Interaction.cpp in Sources */,
 				CE89B19118F3426700075009 /* SequenceAnnotation.cpp in Sources */,
+				CEA17E31190025FC00558F70 /* ModuleInstantiation.cpp in Sources */,
+				CEA17E2E1900245D00558F70 /* Module.cpp in Sources */,
 				CE29DFED18EE0A6600EA4A64 /* Context.cpp in Sources */,
 				CE83EC3F18DF785500D58ED4 /* Signal.cpp in Sources */,
 				CE2588D518EDFF4200242884 /* Component.cpp in Sources */,

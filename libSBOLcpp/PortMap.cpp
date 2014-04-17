@@ -7,3 +7,18 @@
 //
 
 #include "PortMap.h"
+
+PortMap::PortMap(string identity, Port* port):Identified(identity)
+{
+    this->port = port;
+}
+
+void PortMap::setMapping(ComponentInstantiation* mapping)
+{
+    this->mapping = mapping;
+}
+
+ComponentInstantiation* PortMap::getMapping()
+{
+    return mapping;
+}

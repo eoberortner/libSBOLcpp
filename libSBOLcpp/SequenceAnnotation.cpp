@@ -33,14 +33,14 @@ void SequenceAnnotation::setEnd(int end)
     this->end = end;
 }
 
-string SequenceAnnotation::getOrientation()
-{
-    return orientation;
-}
-
 void SequenceAnnotation::setOrientation(string orientation)
 {
     this->orientation = orientation;
+}
+
+string SequenceAnnotation::getOrientation()
+{
+    return orientation;
 }
 
 Component* SequenceAnnotation::getInstantiated()

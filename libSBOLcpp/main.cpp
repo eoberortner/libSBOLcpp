@@ -22,7 +22,7 @@ using namespace std;
 int main(int argc, const char * argv[])
 {
     
-    Model m = Model("m","m","m_source","m_language","m_framework","m_role");
+    //Model m = Model("m","m","m_source","m_language","m_framework","m_role");
     Context c = Context("c","c");
     Collection c2 = Collection("c2","c2");
     

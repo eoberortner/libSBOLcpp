@@ -25,9 +25,10 @@ private:
     list<Port> ports;
     
 public:
-    SequenceComponent(string identity, string displayId, string type, string sequenceType, Sequence* sequence);
-    
+    SequenceComponent(string identity, string displayId, string type, string sequenceType);
+
     string getSequenceType();
+    void setSequence(Sequence* sequence);
     Sequence* getSequence();
     list<SequenceAnnotation> getSequenceAnnotations();
     list<Port> getPorts();

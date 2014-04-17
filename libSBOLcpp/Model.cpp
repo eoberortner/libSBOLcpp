@@ -8,8 +8,7 @@
 
 #include "Model.h"
 
-Model::Model(string identity, string displayId, string source, string language, string framework, string role)
-    :Documented(identity, displayId)
+Model::Model(string identity, string displayId, string source, string language, string framework, string role): Documented(identity, displayId)
 {
     this->source = source;
     this->language = language;

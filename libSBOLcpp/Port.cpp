@@ -8,7 +8,7 @@
 
 #include "Port.h"
 
-Port::Port(string identity, string displayId): Documented(identity,displayId)
+Port::Port(string identity, string displayId): Documented(identity, displayId)
 {
     
 }

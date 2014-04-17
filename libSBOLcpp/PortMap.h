@@ -16,10 +16,13 @@
 class PortMap: public Identified
 {
 private:
-    Port port;
+    Port* port;
+    ComponentInstantiation* mapping;
     
 public:
-    PortMap(string identity);
+    PortMap(string identity, Port* port);
+    void setMapping(ComponentInstantiation* mapping);
+    ComponentInstantiation* getMapping();
     
     //Port getPort();
 };

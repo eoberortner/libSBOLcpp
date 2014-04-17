@@ -32,9 +32,9 @@ public:
     int getEnd();
     void setStart(int start);
     void setEnd(int end);
-    
-    string getOrientation();
+
     void setOrientation(string orientation);
+    string getOrientation();
     
     Component* getInstantiated();
     list<SequenceAnnotation*> getPreceded();

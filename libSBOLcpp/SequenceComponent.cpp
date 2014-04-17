@@ -8,10 +8,9 @@
 
 #include "SequenceComponent.h"
 
-SequenceComponent::SequenceComponent(string identity, string displayId, string type, string sequenceType, Sequence* sequence):Component(identity, displayId, type)
+SequenceComponent::SequenceComponent(string identity, string displayId, string type, string sequenceType):Component(identity, displayId, type)
 {
     this->sequenceType = sequenceType;
-    this->sequence = sequence;
 }
 
 string SequenceComponent::getSequenceType()
@@ -19,11 +18,15 @@ string SequenceComponent::getSequenceType()
     return sequenceType;
 }
 
+void SequenceComponent::setSequence(Sequence* sequence)
+{
+    this->sequence = sequence;
+}
+
 Sequence* SequenceComponent::getSequence()
 {
     return sequence;
 }
-
 
 list<SequenceAnnotation> SequenceComponent::getSequenceAnnotations()
 {
