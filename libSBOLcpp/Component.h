@@ -23,8 +23,10 @@ private:
 public:
     Component(string identity, string displayId, string type);
     
-    string getType();
+    const string getType() const;
     
 };
+
+ostream &operator<< (ostream &out, Component &c);
 
 #endif /* defined(__UML_Diagram__Component__) */

@@ -13,7 +13,7 @@ Documented::Documented(string identity, string displayId):Identified(identity)
     this->displayId = displayId;
 }
 
-string Documented::getDisplayId()
+const string Documented::getDisplayId() const
 {
     return displayId;
 }

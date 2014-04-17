@@ -43,7 +43,7 @@ string SequenceAnnotation::getOrientation()
     return orientation;
 }
 
-Component* SequenceAnnotation::getInstantiated()
+const Component* SequenceAnnotation::getInstantiated() const
 {
     return instantiated;
 }
@@ -52,3 +52,15 @@ list<SequenceAnnotation*> SequenceAnnotation::getPreceded()
 {
     return precedes;
 }
+
+void SequenceAnnotation::setPrecedes(list<SequenceAnnotation*> precedes)
+{
+    this->precedes = precedes;
+}
+
+void SequenceAnnotation::addPrecedes(SequenceAnnotation* precedes)
+{
+    (this->precedes).push_back(precedes);
+}
+
+

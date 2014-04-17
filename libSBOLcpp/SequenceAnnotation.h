@@ -36,9 +36,10 @@ public:
     void setOrientation(string orientation);
     string getOrientation();
     
-    Component* getInstantiated();
+    const Component* getInstantiated() const;
     list<SequenceAnnotation*> getPreceded();
-    
+    void setPrecedes(list<SequenceAnnotation*> precedes);
+    void addPrecedes(SequenceAnnotation* precedes);
 };
 
 #endif /* defined(__UML_Diagram__SequenceAnnotation__) */

@@ -15,7 +15,7 @@ ModuleInstantiation::ModuleInstantiation(string identity, string displayId, Comp
     this->instantiated = instantiated;
 }
 
-Component* ModuleInstantiation::getInstantiated()
+const Component* ModuleInstantiation::getInstantiated() const
 {
-    return instantiated;
+    return (this->instantiated);
 }

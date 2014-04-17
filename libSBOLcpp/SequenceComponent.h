@@ -28,9 +28,16 @@ public:
     SequenceComponent(string identity, string displayId, string type, string sequenceType);
 
     string getSequenceType();
+    
     void setSequence(Sequence* sequence);
     Sequence* getSequence();
+    
+    void setSequenceAnnotations(list<SequenceAnnotation> sequenceAnnotations);
+    void addSequenceAnnotations(SequenceAnnotation sequenceAnnotation);
     list<SequenceAnnotation> getSequenceAnnotations();
+    
+    void setPorts(list<Port> ports);
+    void addPorts(Port ports);
     list<Port> getPorts();
     
 };

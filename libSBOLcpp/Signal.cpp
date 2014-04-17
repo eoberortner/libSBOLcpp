@@ -9,15 +9,26 @@
 #include "Signal.h"
 
 Signal::Signal(string identity, string displayId, Component* instantiated)
-:ComponentInstantiation(identity, displayId), instantiated(instantiated)
+    :ComponentInstantiation(identity, displayId), instantiated(instantiated)
 {
     this->instantiated = instantiated;
 }
 
+Signal::Signal(Signal const& s): ComponentInstantiation(s.getIdentity(), s.getDisplayId())
+{
+    this->instantiated = new Component((s.getInstantiated())->getIdentity(),(s.getInstantiated())->getDisplayId(),(s.getInstantiated())->getType());
+}
 
-
-Component* Signal::getInstantiated()
+const Component* Signal::getInstantiated() const
 {
     return (this->instantiated);
 }
  
+ostream &operator<< (ostream &out, Signal &s)
+{
+    cout << "Signal " << s.getDisplayId() << "{ " << endl;
+    cout << "intantiates " << (s.getInstantiated()) << endl;
+    cout << " } " << endl;
+    
+    return out;
+}

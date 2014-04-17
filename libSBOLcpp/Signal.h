@@ -22,8 +22,11 @@ private:
     
 public:
     Signal(string identity, string displayId, Component* instantiated);
+    Signal(Signal const& s);
     
-    Component* getInstantiated();
+    const Component* getInstantiated() const;
 };
+
+ostream &operator<< (ostream &out, Signal &s);
 
 #endif /* defined(__UML_Diagram__Signal__) */

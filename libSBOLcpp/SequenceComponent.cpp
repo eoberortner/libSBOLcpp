@@ -28,9 +28,29 @@ Sequence* SequenceComponent::getSequence()
     return sequence;
 }
 
+void SequenceComponent::setSequenceAnnotations(list<SequenceAnnotation> sequenceAnnotations)
+{
+    this->sequenceAnnotations = sequenceAnnotations;
+}
+
+void SequenceComponent::addSequenceAnnotations(SequenceAnnotation sequenceAnnotation)
+{
+    (this->sequenceAnnotations).push_back(sequenceAnnotation);
+}
+
 list<SequenceAnnotation> SequenceComponent::getSequenceAnnotations()
 {
     return this->sequenceAnnotations;
+}
+
+void SequenceComponent::setPorts(list<Port> ports)
+{
+    this->ports = ports;
+}
+
+void SequenceComponent::addPorts(Port port)
+{
+    (this->ports).push_back(port);
 }
 
 list<Port> SequenceComponent::getPorts()

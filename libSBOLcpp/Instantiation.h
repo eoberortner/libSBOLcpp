@@ -23,7 +23,7 @@ public:
     Instantiation(string identity, string displayId);
     
     list<PortMap> getPortMaps();
-    virtual Documented* getInstantiated() = 0;
+    virtual const Documented* getInstantiated() const = 0;
     
 };
 

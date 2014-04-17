@@ -32,6 +32,31 @@ private:
 public:
     Module(string identity, string displayId);
     
+    void setSignals(list<Signal> signals);
+    list<Signal> getSignals();
+    void addSignal(Signal signal);
+    
+    void setSubModules(list<ModuleInstantiation> subModules);
+    list<ModuleInstantiation> getSubModules();
+    void addSubModules(ModuleInstantiation subModule);
+    
+    void setInteractions(list<Interaction> interactions);
+    list<Interaction> getInteractions();
+    void addInteractions(Interaction interaction);
+    
+    void setPorts(list<Port> ports);
+    list<Port> getPorts();
+    void addPorts(Port port);
+    
+    void setContexts(list<Context*> contexts);
+    list<Context*> getContexts();
+    void addContexts(Context* context);
+    
+    void setModels(list<Model*> models);
+    list<Model*> getModels();
+    void addModels(Model* model);
 };
+
+ostream &operator<< (ostream &out, Module &m);
 
 #endif /* defined(__UML_Diagram__Module__) */
