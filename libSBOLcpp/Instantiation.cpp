@@ -13,10 +13,18 @@ Instantiation::Instantiation(string identity, string displayId):Documented(ident
     
 }
 
+void Instantiation::setPortMaps(list<PortMap> portMaps)
+{
+    this->portMaps = portMaps;
+}
 
 list<PortMap> Instantiation::getPortMaps()
 {
     return this->portMaps;
 }
 
+void Instantiation::addPortMap(PortMap p)
+{
+    (this->portMaps).push_back(p);
+}
 

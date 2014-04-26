@@ -22,8 +22,11 @@ public:
         
     Instantiation(string identity, string displayId);
     
+    void setPortMaps(list<PortMap> portMaps);
     list<PortMap> getPortMaps();
-    virtual const Documented* getInstantiated() const = 0;
+    void addPortMap(PortMap p);
+    
+    virtual Documented* getInstantiated() const = 0;
     
 };
 

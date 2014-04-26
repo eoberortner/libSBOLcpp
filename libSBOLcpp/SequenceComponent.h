@@ -33,12 +33,12 @@ public:
     Sequence* getSequence();
     
     void setSequenceAnnotations(list<SequenceAnnotation> sequenceAnnotations);
-    void addSequenceAnnotations(SequenceAnnotation sequenceAnnotation);
     list<SequenceAnnotation> getSequenceAnnotations();
+    void addSequenceAnnotation(SequenceAnnotation sequenceAnnotation);
     
     void setPorts(list<Port> ports);
-    void addPorts(Port ports);
     list<Port> getPorts();
+    void addPort(Port port);
     
 };
 

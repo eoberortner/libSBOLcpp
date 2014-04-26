@@ -39,7 +39,7 @@ list<ModuleInstantiation> Module::getSubModules()
     return subModules;
 }
 
-void Module::addSubModules(ModuleInstantiation subModule)
+void Module::addSubModule(ModuleInstantiation subModule)
 {
     (this->subModules).push_back(subModule);
 }
@@ -54,7 +54,7 @@ list<Interaction> Module::getInteractions()
     return interactions;
 }
 
-void Module::addInteractions(Interaction interaction)
+void Module::addInteraction(Interaction interaction)
 {
     (this->interactions).push_back(interaction);
 }
@@ -69,7 +69,7 @@ list<Port> Module::getPorts()
     return ports;
 }
 
-void Module::addPorts(Port port)
+void Module::addPort(Port port)
 {
     (this->ports).push_back(port);
 }
@@ -84,7 +84,7 @@ list<Context*> Module::getContexts()
     return contexts;
 }
 
-void Module::addContexts(Context* context)
+void Module::addContext(Context* context)
 {
     (this->contexts).push_back(context);
 }
@@ -99,14 +99,27 @@ list<Model*> Module::getModels()
     return models;
 }
 
-void Module::addModels(Model* model)
+void Module::addModel(Model* model)
 {
     (this->models).push_back(model);
 }
 
 ostream &operator<< (ostream &out, Module &m)
 {
-    cout << "Module " << m.getDisplayId() << " {" << endl;
+    cout << "Module " << m.getIdentity() << m.getDisplayId() << " { \n\n";
+    
+    int count = 0;
+    for (list<Context*>::iterator it = (m.getContexts()).begin(); it != (m.getContexts()).end(); it++)
+    {
+        count++;
+        cout << count << endl;
+        cout << **it << endl;
+    }
+    
+    for (list<Model*>::iterator it = (m.getModels()).begin(); it != (m.getModels()).end(); it++)
+    {
+        cout << **it << endl;
+    }
     
     for (list<Signal>::iterator it = (m.getSignals()).begin(); it != (m.getSignals()).end(); it++)
     {

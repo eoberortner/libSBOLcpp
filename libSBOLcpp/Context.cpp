@@ -69,3 +69,10 @@ void Context::setComposition(string composition)
 {
     this->composition = composition;
 }
+
+ostream &operator<< (ostream &out, Context &ct)
+{
+    cout << "Context " << ct.getIdentity() << ct.getDisplayId() << endl;
+    
+    return out;
+}

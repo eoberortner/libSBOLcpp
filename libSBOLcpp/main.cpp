@@ -39,22 +39,32 @@ int main(int argc, const char * argv[])
     Interaction i = Interaction("i", "i", "type", p_list);
     */
     
-    Module m = Module("m","m");
+    Module m = Module("m","0");
     
-    Component c1 = Component("c1","c1","type1");
-    Component c2 = Component("c2","c2","type2");
-    Component c3 = Component("c3","c3","type3");
+    Context context1 = Context("ct","1");
+    Context context2 = Context("ct","2");
     
-    Signal s1 = Signal("s1", "s1", &c1);
-    Signal s2 = Signal("s2", "s2", &c2);
-    Signal s3 = Signal("s3", "s3", &c3);
+    Model model1 = Model("md","1","source1","language1","framework1","role1");
+    Model model2 = Model("md","2","source2","language2","framework2","role2");
+    
+    Component c1 = Component("c","1","type1");
+    Component c2 = Component("c","2","type2");
+    Component c3 = Component("c","3","type3");
+    
+    Signal s1 = Signal("s", "1", &c1);
+    Signal s2 = Signal("s", "2", &c2);
+    Signal s3 = Signal("s", "3", &c3);
     
     m.addSignal(s1);
-    m.addSignal(s2);
-    m.addSignal(s3);
+    //m.addSignal(s2);
+    //m.addSignal(s3);
+    m.addContext(&context1);
+    m.addContext(&context2);
+    m.addModel(&model1);
+    m.addModel(&model2);
     
-    cout << c1;
-    cout << s1;
+    cout << c1 << endl;
+    cout << s1 << endl;
     cout << m;
 
     cout << "Hello, World!\n";

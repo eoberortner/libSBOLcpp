@@ -29,4 +29,5 @@ public:
     string getRole();
 };
 
+ostream &operator<< (ostream &out, Model &model);
 #endif /* defined(__UML_Diagram__Model__) */

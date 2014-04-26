@@ -19,16 +19,27 @@ Signal::Signal(Signal const& s): ComponentInstantiation(s.getIdentity(), s.getDi
     this->instantiated = new Component((s.getInstantiated())->getIdentity(),(s.getInstantiated())->getDisplayId(),(s.getInstantiated())->getType());
 }
 
-const Component* Signal::getInstantiated() const
+Component* Signal::getInstantiated() const
 {
     return (this->instantiated);
 }
  
 ostream &operator<< (ostream &out, Signal &s)
 {
-    cout << "Signal " << s.getDisplayId() << "{ " << endl;
-    cout << "intantiates " << (s.getInstantiated()) << endl;
+    /*
+    Component c = Component("c","c","type");
+    Signal* s_new = new Signal("s","s",&c);
+    s_new = &s;
+    
+    cout << "Signal " << s_new->getDisplayId() << "{ " << endl;
+    cout << "intantiates " << (s_new->getInstantiated()) << endl;
     cout << " } " << endl;
+    */
+    
+    
+    cout << "Signal " << s.getIdentity() << s.getDisplayId() << "{ " << endl;
+    cout << "intantiates " << *(s.getInstantiated()) << endl;
+    cout << "} " << endl;
     
     return out;
 }

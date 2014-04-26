@@ -23,7 +23,7 @@ private:
 public:
     Component(string identity, string displayId, string type);
     
-    const string getType() const;
+    string getType() const;
     
 };
 

@@ -38,23 +38,23 @@ public:
     
     void setSubModules(list<ModuleInstantiation> subModules);
     list<ModuleInstantiation> getSubModules();
-    void addSubModules(ModuleInstantiation subModule);
+    void addSubModule(ModuleInstantiation subModule);
     
     void setInteractions(list<Interaction> interactions);
     list<Interaction> getInteractions();
-    void addInteractions(Interaction interaction);
+    void addInteraction(Interaction interaction);
     
     void setPorts(list<Port> ports);
     list<Port> getPorts();
-    void addPorts(Port port);
+    void addPort(Port port);
     
     void setContexts(list<Context*> contexts);
     list<Context*> getContexts();
-    void addContexts(Context* context);
+    void addContext(Context* context);
     
     void setModels(list<Model*> models);
     list<Model*> getModels();
-    void addModels(Model* model);
+    void addModel(Model* model);
 };
 
 ostream &operator<< (ostream &out, Module &m);

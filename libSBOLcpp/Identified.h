@@ -23,7 +23,7 @@ private:
 public:
     Identified(string identity);
     
-    const string getIdentity() const;
+    string getIdentity() const;
     string getAnnotation();
     
     void setAnnotation(string annotation);

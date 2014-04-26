@@ -22,7 +22,9 @@ class Collection: public Documented
 public:
     Collection(string identity, string displayId);
    
+    void setElements(list<Identified*> elements);
     list<Identified*> getElements();
+    void addElement(Identified* element);
 };
 
 #endif /* defined(__UML_Diagram__Collection__) */

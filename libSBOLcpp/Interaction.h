@@ -27,6 +27,8 @@ public:
     Interaction(string identity, string displayId, string type, list<Participation> participations);
     
     string getType();
+    
+    list<Participation> getParticipations();
     void addParticipation(Participation p);
 };
 

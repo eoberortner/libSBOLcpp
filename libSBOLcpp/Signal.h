@@ -24,7 +24,7 @@ public:
     Signal(string identity, string displayId, Component* instantiated);
     Signal(Signal const& s);
     
-    const Component* getInstantiated() const;
+    Component* getInstantiated() const;
 };
 
 ostream &operator<< (ostream &out, Signal &s);

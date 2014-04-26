@@ -36,9 +36,10 @@ public:
     void setOrientation(string orientation);
     string getOrientation();
     
-    const Component* getInstantiated() const;
-    list<SequenceAnnotation*> getPreceded();
+    Component* getInstantiated() const;
+    
     void setPrecedes(list<SequenceAnnotation*> precedes);
+    list<SequenceAnnotation*> getPreceded();
     void addPrecedes(SequenceAnnotation* precedes);
 };
 

@@ -33,14 +33,14 @@ void SequenceComponent::setSequenceAnnotations(list<SequenceAnnotation> sequence
     this->sequenceAnnotations = sequenceAnnotations;
 }
 
-void SequenceComponent::addSequenceAnnotations(SequenceAnnotation sequenceAnnotation)
-{
-    (this->sequenceAnnotations).push_back(sequenceAnnotation);
-}
-
 list<SequenceAnnotation> SequenceComponent::getSequenceAnnotations()
 {
     return this->sequenceAnnotations;
+}
+
+void SequenceComponent::addSequenceAnnotation(SequenceAnnotation sequenceAnnotation)
+{
+    (this->sequenceAnnotations).push_back(sequenceAnnotation);
 }
 
 void SequenceComponent::setPorts(list<Port> ports)
@@ -48,12 +48,12 @@ void SequenceComponent::setPorts(list<Port> ports)
     this->ports = ports;
 }
 
-void SequenceComponent::addPorts(Port port)
-{
-    (this->ports).push_back(port);
-}
-
 list<Port> SequenceComponent::getPorts()
 {
     return this->ports;
+}
+
+void SequenceComponent::addPort(Port port)
+{
+    (this->ports).push_back(port);
 }

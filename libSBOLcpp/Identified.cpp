@@ -13,7 +13,7 @@ Identified::Identified(string identity)
     this->identity = identity;
 }
 
-const string Identified::getIdentity() const
+string Identified::getIdentity() const
 {
     return identity;
 }

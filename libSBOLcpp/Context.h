@@ -39,4 +39,6 @@ public:
     
 };
 
+ostream &operator<< (ostream &out, Context &ct);
+
 #endif /* defined(__UML_Diagram__Context__) */

@@ -13,14 +13,14 @@ Component::Component(string identity, string displayId, string type):Documented(
     this->type = type;
 }
 
-const string Component::getType() const
+string Component::getType() const
 {
     return type;
 }
 
 ostream &operator<< (ostream &out, Component &c)
 {
-    cout << "Component " << c.getDisplayId() << endl;
+    cout << "Component " << c.getIdentity() << c.getDisplayId() << endl;
     
     return out;
 }

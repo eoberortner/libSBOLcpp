@@ -24,7 +24,7 @@ private:
 public:
     Documented(string,string);
     
-    const string getDisplayId() const;
+    string getDisplayId() const;
     string getName();
     string getDescription();
     

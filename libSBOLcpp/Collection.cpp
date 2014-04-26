@@ -13,7 +13,17 @@ Collection::Collection(string identity, string displayId):Documented(identity, d
     
 }
 
+void Collection::setElements(list<Identified*> elements)
+{
+    this->elements = elements;
+}
+
 list<Identified*> Collection::getElements()
 {
     return this->elements;
+}
+
+void Collection::addElement(Identified* element)
+{
+    (this->elements).push_back(element);
 }

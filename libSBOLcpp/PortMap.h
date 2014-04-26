@@ -21,6 +21,7 @@ private:
     
 public:
     PortMap(string identity, Port* port);
+    
     void setMapping(ComponentInstantiation* mapping);
     ComponentInstantiation* getMapping();
     

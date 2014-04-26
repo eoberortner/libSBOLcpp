@@ -22,6 +22,11 @@ string Interaction::getType()
     return type;
 }
 
+list<Participation> Interaction::getParticipations()
+{
+    return (this->participations);
+}
+
 void Interaction::addParticipation(Participation p)
 {
     (this->participations).push_back(p);

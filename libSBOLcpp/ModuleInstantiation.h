@@ -20,7 +20,7 @@ private:
     
 public:
     ModuleInstantiation(string identity, string displayId, Component* instantiated);
-    const Component* getInstantiated() const;
+    Component* getInstantiated() const;
 };
 
 #endif /* defined(__UML_Diagram__ModuleInstantiation__) */
