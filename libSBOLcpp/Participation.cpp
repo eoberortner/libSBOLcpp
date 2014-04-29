@@ -9,7 +9,7 @@
 #include "Participation.h"
 
 
-Participation::Participation(string identity, string role, Signal* participant):Identified(role)
+Participation::Participation(string identity, string role, Signal* participant):Identified(identity)
 {
     this->role = role;
     this->participant = participant;
@@ -19,4 +19,19 @@ Participation::Participation(string identity, string role, Signal* participant):
 string Participation::getRole()
 {
     return role;
+}
+
+Signal* Participation::getParticipant()
+{
+    return participant;
+}
+
+ostream &operator<< (ostream &out, Participation &p)
+{
+    cout << "Participation " << p.getIdentity() << " { " << endl;
+    cout << "Role: " << p.getRole() << endl;
+    cout << "Participant: " << *(p.getParticipant()) << endl;
+    cout << "}";
+    
+    return out;
 }

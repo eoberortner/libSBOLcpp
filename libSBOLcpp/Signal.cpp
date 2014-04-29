@@ -37,9 +37,9 @@ ostream &operator<< (ostream &out, Signal &s)
     */
     
     
-    cout << "Signal " << s.getIdentity() << s.getDisplayId() << "{ " << endl;
-    cout << "intantiates " << *(s.getInstantiated()) << endl;
-    cout << "} " << endl;
+    cout << "Signal " << s.getIdentity() << s.getDisplayId() << " { " << endl;
+    cout << "Intantiates: " << *(s.getInstantiated());
+    cout << "} ";
     
     return out;
 }

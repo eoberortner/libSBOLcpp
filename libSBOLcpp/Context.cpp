@@ -72,7 +72,13 @@ void Context::setComposition(string composition)
 
 ostream &operator<< (ostream &out, Context &ct)
 {
-    cout << "Context " << ct.getIdentity() << ct.getDisplayId() << endl;
+    cout << "Context " << ct.getIdentity() << ct.getDisplayId() << " { " << endl;
+    cout << "MeasurmentDevice: " << ct.getMeasurementDevice() << endl;
+    cout << "Environment: " << ct.getEnvironment() << endl;
+    cout << "Container: " << ct.getContainer() << endl;
+    cout << "Medium: " << ct.getMedium() << endl;
+    cout << "Composition: " << ct.getComposition() << endl;
+    cout << "} " << endl;
     
     return out;
 }

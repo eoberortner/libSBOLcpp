@@ -31,3 +31,20 @@ void Interaction::addParticipation(Participation p)
 {
     (this->participations).push_back(p);
 }
+
+ostream &operator<< (ostream &out, Interaction &i)
+{
+    cout << "Interaction " << i.getIdentity() << i.getDisplayId() << " { " << endl;
+    cout << "Type: " << i.getType() << endl;
+    cout << "Participations: ";
+    
+    list<Participation> participationList = i.getParticipations();
+    for (list<Participation>::iterator it = participationList.begin(); it != participationList.end(); it++)
+    {
+        cout << *it << endl;
+    }
+    
+    cout << "}";
+    
+    return out;
+}

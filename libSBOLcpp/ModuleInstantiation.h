@@ -23,4 +23,6 @@ public:
     Component* getInstantiated() const;
 };
 
+ostream &operator<< (ostream &out, ModuleInstantiation &m);
+
 #endif /* defined(__UML_Diagram__ModuleInstantiation__) */

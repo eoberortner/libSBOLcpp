@@ -32,4 +32,6 @@ public:
     void addParticipation(Participation p);
 };
 
+ostream &operator<< (ostream &out, Interaction &i);
+
 #endif /* defined(__UML_Diagram__Interaction__) */

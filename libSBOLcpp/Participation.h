@@ -23,7 +23,10 @@ public:
     Participation(string identity, string role, Signal*);
     
     string getRole();
+    Signal* getParticipant();
     
 };
+
+ostream &operator<< (ostream &out, Participation &p);
 
 #endif /* defined(__UML_Diagram__Participation__) */

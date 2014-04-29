@@ -40,10 +40,10 @@ string Model::getRole()
 ostream &operator<< (ostream &out, Model &model)
 {
     cout << "Model " << model.getIdentity() << model.getDisplayId() << " {" << endl;
-    cout << "source " << model.getSource() << endl;
-    cout << "language " << model.getLanguage() << endl;
-    cout << "framework " << model.getFramework() << endl;
-    cout << "role " << model.getRole() << endl;
+    cout << "Source: " << model.getSource() << endl;
+    cout << "Language: " << model.getLanguage() << endl;
+    cout << "Framework: " << model.getFramework() << endl;
+    cout << "Role: " << model.getRole() << endl;
     cout << "} " << endl;
     
     return out;

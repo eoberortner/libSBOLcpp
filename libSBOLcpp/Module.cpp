@@ -81,7 +81,7 @@ void Module::setContexts(list<Context*> contexts)
 
 list<Context*> Module::getContexts()
 {
-    return contexts;
+    return (this->contexts);
 }
 
 void Module::addContext(Context* context)
@@ -96,7 +96,7 @@ void Module::setModels(list<Model*> models)
 
 list<Model*> Module::getModels()
 {
-    return models;
+    return (this->models);
 }
 
 void Module::addModel(Model* model)
@@ -108,24 +108,51 @@ ostream &operator<< (ostream &out, Module &m)
 {
     cout << "Module " << m.getIdentity() << m.getDisplayId() << " { \n\n";
     
-    int count = 0;
-    for (list<Context*>::iterator it = (m.getContexts()).begin(); it != (m.getContexts()).end(); it++)
-    {
-        count++;
-        cout << count << endl;
-        cout << **it << endl;
-    }
+    cout << "Contexts: \n";
+    list<Context*> contextList = m.getContexts();
     
-    for (list<Model*>::iterator it = (m.getModels()).begin(); it != (m.getModels()).end(); it++)
+    for (list<Context*>::iterator it = contextList.begin(); it != contextList.end(); it++)
     {
         cout << **it << endl;
     }
+   
     
-    for (list<Signal>::iterator it = (m.getSignals()).begin(); it != (m.getSignals()).end(); it++)
+    cout << "Models: \n";
+    list<Model*> modelList = m.getModels();
+   
+    for (list<Model*>::iterator it = modelList.begin(); it != modelList.end(); it++)
+    {
+        cout << **it << endl;
+    }
+    
+    
+    cout << "Signals: \n";
+    list<Signal> signalList = m.getSignals();
+    
+    for (list<Signal>::iterator it = signalList.begin(); it != signalList.end(); it++)
     {
         cout << *it << endl;
     }
-    cout << "}" << endl;
     
+    
+    cout << "SubModules: \n";
+    list<ModuleInstantiation> subModuleList = m.getSubModules();
+    
+    for (list<ModuleInstantiation>::iterator it = subModuleList.begin(); it != subModuleList.end(); it++)
+    {
+        cout << *it << endl;
+    }
+    
+    cout << "Interactions: \n";
+    list<Interaction> interactionList = m.getInteractions();
+    
+    for (list<Interaction>::iterator it = interactionList.begin(); it != interactionList.end(); it++)
+    {
+        cout << *it << endl;
+    }
+    
+    
+    
+    cout << "}" << endl;
     return out;
 }

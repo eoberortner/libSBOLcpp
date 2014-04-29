@@ -20,7 +20,9 @@ string Component::getType() const
 
 ostream &operator<< (ostream &out, Component &c)
 {
-    cout << "Component " << c.getIdentity() << c.getDisplayId() << endl;
+    cout << "Component " << c.getIdentity() << c.getDisplayId() << " { " << endl;
+    cout << "Type: " << c.getType() << endl;
+    cout << "}" << endl;
     
     return out;
 }

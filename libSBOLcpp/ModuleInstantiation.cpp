@@ -19,3 +19,12 @@ Component* ModuleInstantiation::getInstantiated() const
 {
     return (this->instantiated);
 }
+
+ostream &operator<< (ostream &out, ModuleInstantiation &m)
+{
+    cout << "ModuleInstantiation " << m.getIdentity() << m.getDisplayId() << " { \n";
+    cout << "Instantiates: " << *(m.getInstantiated()) ;
+    cout << "} \n";
+    
+    return out;
+}
