@@ -81,7 +81,7 @@ int main(int argc, const char * argv[])
 
     col1.addElement(&s1);
     
-    cout << col1 << endl;
+    //cout << col1 << endl;
     
     Documented d1 = Documented("d","1");
     d1.setName("documented1");
@@ -93,8 +93,6 @@ int main(int argc, const char * argv[])
     
     //cout << g1 << endl;
     
-    
-    //Instantiation ins1 = Instantiation("ins","1");
     
     
     Sequence s = Sequence("s","1","element1");
