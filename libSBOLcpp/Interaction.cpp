@@ -44,7 +44,7 @@ ostream &operator<< (ostream &out, Interaction &i)
         cout << *it << endl;
     }
     
-    cout << "}";
+    cout << "} \n";
     
     return out;
 }

@@ -151,6 +151,13 @@ ostream &operator<< (ostream &out, Module &m)
         cout << *it << endl;
     }
     
+    cout << "Ports: \n";
+    list<Port> portsList = m.getPorts();
+    
+    for (list<Port>::iterator it = portsList.begin(); it != portsList.end(); it++)
+    {
+        cout << *it << endl;
+    }
     
     
     cout << "}" << endl;

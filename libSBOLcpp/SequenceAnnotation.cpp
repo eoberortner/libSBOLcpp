@@ -81,7 +81,7 @@ ostream &operator<< (ostream &out, SequenceAnnotation &s)
     }
     
 
-    cout << "}";
+    cout << "} \n";
     
     return out;
 }

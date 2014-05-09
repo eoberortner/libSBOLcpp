@@ -20,4 +20,6 @@ public:
     virtual Component* getInstantiated() const = 0;
 };
 
+ostream &operator<< (ostream &out, ComponentInstantiation &c);
+
 #endif /* defined(__UML_Diagram__ComponentInstantiation__) */

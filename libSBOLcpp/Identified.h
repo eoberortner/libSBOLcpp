@@ -29,4 +29,6 @@ public:
     void setAnnotation(string annotation);
 };
 
+ostream &operator<< (ostream &out, Identified &i);
+
 #endif /* defined(__UML_Diagram__Identified__) */

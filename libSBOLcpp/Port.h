@@ -29,7 +29,9 @@ public:
     void setDirectionality(string directionality);
     
     void setExposes(ComponentInstantiation* exposes);
-    ComponentInstantiation* getExposed();
+    ComponentInstantiation* getExposed() const;
 };
+
+ostream &operator<< (ostream &out, Port &p);
 
 #endif /* defined(__UML_Diagram__Port__) */

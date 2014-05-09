@@ -30,4 +30,6 @@ public:
     
 };
 
+ostream &operator<< (ostream &out, Instantiation &i);
+
 #endif /* defined(__UML_Diagram__Instantiation__) */

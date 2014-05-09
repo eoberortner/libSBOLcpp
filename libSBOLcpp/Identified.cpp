@@ -27,3 +27,12 @@ void Identified::setAnnotation(string annotation)
 {
     this->annotation = annotation;
 }
+
+ostream &operator<< (ostream &out, Identified &i)
+{
+    cout << "{ \n"  << "Identity " << i.getIdentity() << endl;
+    cout << "Annotation: " << i.getAnnotation() << endl;
+    cout << "} \n";
+    
+    return out;
+}

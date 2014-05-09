@@ -27,3 +27,19 @@ void Collection::addElement(Identified* element)
 {
     (this->elements).push_back(element);
 }
+
+ostream &operator<< (ostream &out, Collection &c)
+{
+    cout << "Collection " << c.getIdentity() << c.getDisplayId() << " { " << endl;
+    cout << "Elements: " ;
+    
+    list<Identified*> elementsList = c.getElements();
+    for (list<Identified*>::iterator it = elementsList.begin(); it != elementsList.end(); it++)
+    {
+        cout << **it << endl;
+    }
+    
+    cout << "} \n";
+    
+    return out;
+}

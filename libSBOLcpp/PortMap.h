@@ -10,6 +10,7 @@
 #define __SBOL__PortMap__
 
 #include <iostream>
+#include <list>
 #include "Identified.h"
 #include "Port.h"
 
@@ -25,7 +26,9 @@ public:
     void setMapping(ComponentInstantiation* mapping);
     ComponentInstantiation* getMapping();
     
-    //Port getPort();
+    Port* getPort();
 };
+
+ostream &operator<< (ostream &out, PortMap &p);
 
 #endif /* defined(__UML_Diagram__PortMap__) */

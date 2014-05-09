@@ -13,3 +13,13 @@ GenericComponent::GenericComponent(string identity, string displayId, string typ
 {
     
 }
+
+
+ostream &operator<< (ostream &out, GenericComponent &g)
+{
+    cout << "GenericComponent " << g.getIdentity() << g.getDisplayId() << "{ " << endl;
+    cout << "Type : " << g.getType() << endl;
+    cout << "} \n";
+    
+    return out;
+}

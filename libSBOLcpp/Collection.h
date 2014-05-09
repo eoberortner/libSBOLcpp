@@ -27,4 +27,6 @@ public:
     void addElement(Identified* element);
 };
 
+ostream &operator<< (ostream &out, Collection &c);
+
 #endif /* defined(__UML_Diagram__Collection__) */

@@ -28,3 +28,18 @@ void Instantiation::addPortMap(PortMap p)
     (this->portMaps).push_back(p);
 }
 
+ostream &operator<< (ostream &out, Instantiation &i)
+{
+    cout << "Instantiation " << i.getIdentity() << i.getDisplayId() << " { " << endl;
+    cout << "PortMaps: ";
+    
+    list<PortMap> portMapsList = i.getPortMaps();
+    for (list<PortMap>::iterator it = portMapsList.begin(); it != portMapsList.end(); it++)
+    {
+        cout << *it << endl;
+    }
+    
+    cout << "} \n";
+    
+    return out;
+}

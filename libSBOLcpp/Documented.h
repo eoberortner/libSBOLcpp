@@ -32,4 +32,6 @@ public:
     void setDescription(string description);
 };
 
+ostream &operator<< (ostream &out, Documented &d);
+
 #endif /* defined(__UML_Diagram__Documented__) */

@@ -16,7 +16,10 @@ class GenericComponent: public Component
 {
 public:
     GenericComponent(string identity, string displayId, string type);
-    
+
 };
+
+ostream &operator<< (ostream &out, GenericComponent &g);
+
 
 #endif /* defined(__UML_Diagram__GenericComponent__) */

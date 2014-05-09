@@ -37,3 +37,13 @@ void Documented::setDescription(string description)
 {
     this->description = description;
 }
+
+ostream &operator<< (ostream &out, Documented &d)
+{
+    cout << "Document " << d.getIdentity() << d.getDisplayId() << "{ " << endl;
+    cout << "Name: " << d.getName() << endl;
+    cout << "Description: " << d.getDescription() << endl;
+    cout << "} \n";
+    
+    return out;
+}

@@ -20,5 +20,21 @@ void PortMap::setMapping(ComponentInstantiation* mapping)
 
 ComponentInstantiation* PortMap::getMapping()
 {
-    return mapping;
+    return this->mapping;
+}
+
+Port* PortMap::getPort()
+{
+    return this->port;
+}
+
+ostream &operator<< (ostream &out, PortMap &p)
+{
+    cout << "PortMap " << p.getIdentity() << " { " << endl;
+    cout << "Port: " << (p.getPort()) << endl;
+    cout << "Mapping: " << (p.getMapping()) << endl;
+    
+    cout << "}" << endl;
+    
+    return out;
 }

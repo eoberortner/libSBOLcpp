@@ -28,7 +28,16 @@ void Port::setExposes(ComponentInstantiation* exposes)
     this->exposes = exposes;
 }
 
-ComponentInstantiation* Port::getExposed()
+ComponentInstantiation* Port::getExposed() const
 {
     return (this->exposes);
+}
+
+ostream &operator<< (ostream &out, Port &p)
+{
+    cout << "Port " << p.getIdentity() << p.getDisplayId() << " { " << endl;
+    cout << "Exposes: " << (p.getExposed()) << endl;
+    cout << "}" << endl;
+    
+    return out;
 }

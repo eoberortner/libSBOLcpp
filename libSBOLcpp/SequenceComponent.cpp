@@ -64,10 +64,18 @@ ostream &operator<< (ostream &out, SequenceComponent &s)
     cout << "Type: " << s.getType() << endl;
     cout << "SequenceType: " << s.getSequenceType() << endl;
     cout << "Sequence: " << *(s.getSequence()) << endl;
-    cout << "SequenceAnnotations: ";
+    cout << "\nSequenceAnnotations: ";
     
     list<SequenceAnnotation> sequenceAnnotationList = s.getSequenceAnnotations();
     for (list<SequenceAnnotation>::iterator it = sequenceAnnotationList.begin(); it != sequenceAnnotationList.end(); it++)
+    {
+        cout << *it << endl;
+    }
+    
+    cout << "\nPorts: ";
+    
+    list<Port> portsList = s.getPorts();
+    for (list<Port>::iterator it = portsList.begin(); it != portsList.end(); it++)
     {
         cout << *it << endl;
     }

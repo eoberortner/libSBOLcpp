@@ -13,3 +13,10 @@ ComponentInstantiation::ComponentInstantiation(string identity, string displayId
 {
     
 }
+
+ostream &operator<< (ostream &out, ComponentInstantiation &c)
+{
+    cout << "ComponentInstantiation " << c.getIdentity() << c.getDisplayId() << endl;
+    
+    return out;
+}

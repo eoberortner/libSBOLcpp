@@ -17,6 +17,7 @@
 #include "ComponentInstantiation.h"
 #include "Module.h"
 #include "SequenceComponent.h"
+#include "GenericComponent.h"
 
 
 using namespace std;
@@ -56,6 +57,8 @@ int main(int argc, const char * argv[])
     
     Interaction int1 = Interaction("int", "1", "type1", part_list);
     
+    Port p1 = Port("p","1");
+    
 
     m.addSignal(s1);
     m.addSignal(s2);
@@ -68,8 +71,31 @@ int main(int argc, const char * argv[])
     m.addModel(&model3);
     m.addSubModule(mi1);
     m.addInteraction(int1);
+    m.addPort(p1);
 
-    // cout << m << endl;
+    //cout << m << endl;
+    
+    
+    
+    Collection col1 = Collection("col","1");
+
+    col1.addElement(&s1);
+    
+    cout << col1 << endl;
+    
+    Documented d1 = Documented("d","1");
+    d1.setName("documented1");
+    d1.setDescription("description1");
+    
+    //cout << d1 << endl;
+    
+    GenericComponent g1 = GenericComponent("g","1","type1");
+    
+    //cout << g1 << endl;
+    
+    
+    //Instantiation ins1 = Instantiation("ins","1");
+    
     
     Sequence s = Sequence("s","1","element1");
     SequenceAnnotation sa1 = SequenceAnnotation("sa","1",&c1);
@@ -78,6 +104,10 @@ int main(int argc, const char * argv[])
     sa1.addPrecedes(&sa2);
     sa2.addPrecedes(&sa3);
     
+    sa1.setStart(1);
+    sa1.setEnd(100);
+    sa1.setOrientation("orientation");
+    
     SequenceComponent sc = SequenceComponent("sc","1","type","sequenceType");
     
     
@@ -85,8 +115,9 @@ int main(int argc, const char * argv[])
     sc.addSequenceAnnotation(sa1);
     sc.addSequenceAnnotation(sa2);
     sc.addSequenceAnnotation(sa3);
+    sc.addPort(p1);
     
-    //cout << sc << endl;
+    cout << sc << endl;
     
     cout << "Hello, World!\n";
     
