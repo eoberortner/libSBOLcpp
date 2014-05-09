@@ -42,4 +42,6 @@ public:
     
 };
 
+ostream &operator<< (ostream &out, SequenceComponent &s);
+
 #endif /* defined(__UML_Diagram__SequenceComponent__) */

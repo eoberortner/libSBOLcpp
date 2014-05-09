@@ -43,4 +43,6 @@ public:
     void addPrecedes(SequenceAnnotation* precedes);
 };
 
+ostream &operator<< (ostream &out, SequenceAnnotation &s);
+
 #endif /* defined(__UML_Diagram__SequenceAnnotation__) */

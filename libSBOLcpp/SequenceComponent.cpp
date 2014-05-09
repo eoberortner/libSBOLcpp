@@ -57,3 +57,22 @@ void SequenceComponent::addPort(Port port)
 {
     (this->ports).push_back(port);
 }
+
+ostream &operator<< (ostream &out, SequenceComponent &s)
+{
+    cout << "SequenceComponent " << s.getIdentity() << s.getDisplayId() << " { " << endl;
+    cout << "Type: " << s.getType() << endl;
+    cout << "SequenceType: " << s.getSequenceType() << endl;
+    cout << "Sequence: " << *(s.getSequence()) << endl;
+    cout << "SequenceAnnotations: ";
+    
+    list<SequenceAnnotation> sequenceAnnotationList = s.getSequenceAnnotations();
+    for (list<SequenceAnnotation>::iterator it = sequenceAnnotationList.begin(); it != sequenceAnnotationList.end(); it++)
+    {
+        cout << *it << endl;
+    }
+    
+    cout << "}";
+    
+    return out;
+}

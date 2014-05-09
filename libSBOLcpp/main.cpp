@@ -16,6 +16,7 @@
 #include "Signal.h"
 #include "ComponentInstantiation.h"
 #include "Module.h"
+#include "SequenceComponent.h"
 
 
 using namespace std;
@@ -28,6 +29,12 @@ int main(int argc, const char * argv[])
     Context* context1 = new Context("ct","1");
     Context* context2 = new Context("ct","2");
     Context* context3 = new Context("ct","3");
+    
+    context1->setMeasurementDevice("measurement");
+    context1->setEnvironment("environment");
+    context1->setContainer("container");
+    context1->setMedium("medium");
+    context1->setComposition("composition");
     
     Model model1 = Model("md","1","source1","language1","framework1","role1");
     Model model2 = Model("md","2","source2","language2","framework2","role2");
@@ -62,8 +69,25 @@ int main(int argc, const char * argv[])
     m.addSubModule(mi1);
     m.addInteraction(int1);
 
-    cout << m;
-
+    // cout << m << endl;
+    
+    Sequence s = Sequence("s","1","element1");
+    SequenceAnnotation sa1 = SequenceAnnotation("sa","1",&c1);
+    SequenceAnnotation sa2 = SequenceAnnotation("sa","2",&c2);
+    SequenceAnnotation sa3 = SequenceAnnotation("sa","3",&c3);
+    sa1.addPrecedes(&sa2);
+    sa2.addPrecedes(&sa3);
+    
+    SequenceComponent sc = SequenceComponent("sc","1","type","sequenceType");
+    
+    
+    sc.setSequence(&s);
+    sc.addSequenceAnnotation(sa1);
+    sc.addSequenceAnnotation(sa2);
+    sc.addSequenceAnnotation(sa3);
+    
+    //cout << sc << endl;
+    
     cout << "Hello, World!\n";
     
     return 0;

@@ -17,3 +17,12 @@ string Sequence::getElements()
 {
     return elements;
 }
+
+ostream &operator<< (ostream &out, Sequence &s)
+{
+    cout << "Sequence " << s.getIdentity() << s.getDisplayId() << " { " << endl;
+    cout << "Elements: " << s.getElements() << endl;
+    cout << "}";
+    
+    return out;
+}

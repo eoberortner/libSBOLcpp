@@ -64,3 +64,24 @@ void SequenceAnnotation::addPrecedes(SequenceAnnotation* precedes)
 }
 
 
+ostream &operator<< (ostream &out, SequenceAnnotation &s)
+{
+    cout << "Sequence " << s.getIdentity() << s.getDisplayId() << " { " << endl;
+    cout << "Start: " << s.getStart() << endl;
+    cout << "End: " << s.getEnd() << endl;
+    cout << "Orientation: " << s.getOrientation() << endl;
+    cout << "Instantiates: " << *(s.getInstantiated());
+   
+    cout << "Precedes: ";
+    
+    list<SequenceAnnotation*> precedesList = s.getPreceded();
+    for (list<SequenceAnnotation*>::iterator it = precedesList.begin(); it != precedesList.end(); it++)
+    {
+        cout << "Instantiates: " << (*((**it).getInstantiated())).getIdentity() << (*((**it).getInstantiated())).getDisplayId() << endl;
+    }
+    
+
+    cout << "}";
+    
+    return out;
+}
